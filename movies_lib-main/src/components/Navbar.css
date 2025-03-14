@@ -1,0 +1,73 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0f0e17;
+  color: #ffffff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.shell-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#navbar h2 a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #f7d354;
+}
+
+/* Barra de busca */
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-form input {
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  border: none;
+  font-size: 1rem;
+}
+
+.search-form button {
+  background-color: #f7d354;
+  border: none;
+  border-radius: 50%;
+  color: #000;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search-form button:hover {
+  transform: scale(1.1);
+}
+

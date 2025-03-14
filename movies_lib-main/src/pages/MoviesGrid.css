@@ -1,0 +1,143 @@
+/* === Paleta de cores inspirada na HBO Max === */
+:root {
+  --primary-bg: #0f0e17;  /* Fundo escuro */
+  --secondary-bg: #1a1924; /* Fundo dos cards */
+  --highlight: #8a2be2;   /* Roxo vibrante */
+  --text-light: #ffffff;  /* Texto branco */
+  --text-muted: #a3a3a3;  /* Texto secundário */
+  --button-gradient: linear-gradient(90deg, #a020f0, #8a2be2);
+  --button-gradient-hover: linear-gradient(90deg, #8a2be2, #5d1ab2);
+  --button-yellow: #f7d354;
+  --button-yellow-hover: #b8930c;
+}
+
+/* === Título da página === */
+.container .title {
+  color: var(--text-light);
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.title .query-text {
+  color: var(--highlight);
+}
+
+/* === Grid de Filmes === */
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Card dos Filmes === */
+.movies-container div {
+  width: 30%;
+  color: var(--text-light);
+  background-color: var(--secondary-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.movies-container div:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px var(--highlight);
+}
+
+/* === Imagem do Filme === */
+.movies-container div img {
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* === Título do Filme === */
+.movies-container div h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* === Avaliação e Ícones === */
+.movies-container div svg {
+  color: #f7d354;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+
+/* === Botões Detalhes e Favoritar === */
+.movies-container .buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.movies-container .buttons a {
+  flex: 1;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  margin: 0 5px;
+}
+
+.movies-container .buttons .details-btn {
+  background-color: var(--button-yellow);
+  color: #000;
+  border: 2px solid var(--button-yellow);
+}
+
+.movies-container .buttons .details-btn:hover {
+  background-color: var(--button-yellow-hover);
+  color: #fff;
+}
+
+.movies-container .buttons .fav-btn {
+  background: var(--button-gradient);
+  border: 2px solid var(--highlight);
+  color: var(--text-light);
+}
+
+.movies-container .buttons .fav-btn:hover {
+  background: var(--button-gradient-hover);
+  transform: scale(1.05);
+}
+
+/* === Responsividade === */
+@media (max-width: 1024px) {
+  .movies-container div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .movies-container div {
+    width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .movies-container div {
+    width: 95%;
+  }
+}
+

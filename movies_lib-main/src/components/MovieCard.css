@@ -1,0 +1,59 @@
+/* === Alinhamento dos Botões Detalhes e Favoritar === */
+.movie-card .buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .movie-card .buttons a, 
+  .movie-card .buttons button {
+    flex: 1;
+    padding: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    margin: 0 5px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  /* === Botão Detalhes - Amarelo === */
+  .movie-card .buttons .details-btn {
+    background-color: #f7d354;
+    color: #000;
+    border: 2px solid #f7d354;
+  }
+  
+  .movie-card .buttons .details-btn:hover {
+    background-color: #b8930c;
+    color: #fff;
+  }
+  
+  /* === Botão Favoritar - Roxo === */
+  .movie-card .buttons .fav-btn {
+    background: linear-gradient(90deg, #a020f0, #8a2be2);
+    color: white;
+    border: 2px solid #8a2be2;
+  }
+  
+  .movie-card .buttons .fav-btn:hover {
+    background: linear-gradient(90deg, #8a2be2, #5d1ab2);
+    transform: scale(1.05);
+  }
+  
+  /* === Responsividade para telas menores === */
+  @media (max-width: 768px) {
+    .movie-card .buttons {
+      flex-direction: column;
+    }
+  
+    .movie-card .buttons a,
+    .movie-card .buttons button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+  

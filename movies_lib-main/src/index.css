@@ -1,0 +1,198 @@
+/* === Paleta de cores inspirada na HBO Max === */
+:root {
+  --primary-bg: #0f0e17;  /* Fundo escuro */
+  --secondary-bg: #1a1924; /* Fundo dos cards */
+  --highlight: #8a2be2;   /* Roxo vibrante */
+  --text-light: #ffffff;  /* Texto branco */
+  --text-muted: #a3a3a3;  /* Texto secundário */
+  --button-gradient: linear-gradient(90deg, #a020f0, #8a2be2);
+  --button-gradient-hover: linear-gradient(90deg, #8a2be2, #5d1ab2);
+}
+
+/* === Reset global === */
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Corpo da página === */
+body {
+  background-color: var(--primary-bg);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* === Estilização dos links === */
+a {
+  text-decoration: none;
+  color: var(--highlight);
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #c77dff; /* Um roxo mais claro */
+}
+
+/* === Cabeçalho e Navbar === */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: var(--secondary-bg);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--highlight);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-container input {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-container button {
+  background: var(--button-gradient);
+  color: var(--text-light);
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-container button:hover {
+  background: var(--button-gradient-hover);
+}
+
+/* === Estilização do Carrossel === */
+.movie-carousel {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.movie-info h2 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.movie-info p {
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+/* === Grid de Filmes === */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* === Estilização dos Cards de Filmes === */
+.movie-card {
+  background: var(--secondary-bg);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px var(--highlight);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* === Títulos e Textos dos Filmes === */
+.movie-card h2 {
+  font-size: 18px;
+  color: var(--text-light);
+  margin: 10px 0;
+}
+
+.movie-card p {
+  color: #f7d354;
+  font-size: 14px;
+}
+
+/* === Botões === */
+button {
+  background: var(--button-gradient);
+  color: var(--text-light);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--button-gradient-hover);
+  transform: scale(1.05);
+}
+
+/* === Ajuste Responsivo === */
+@media (max-width: 768px) {
+  .movie-info {
+    bottom: 15px;
+    left: 15px;
+    padding: 10px;
+  }
+
+  .carousel-slide {
+    height: 300px;
+  }
+
+  .movie-card img {
+    height: 250px;
+  }
+}
